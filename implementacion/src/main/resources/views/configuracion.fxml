@@ -36,11 +36,14 @@
                         <Label fx:id="lblDineroInicial" style="-fx-text-fill: #FFD700; -fx-font-size: 14px; -fx-font-weight: bold;"/>
                     </HBox>
                     
-                    <TextArea text="Banquero: $1600 (Más dinero, menos habilidades)
-Carpintero: $800 (Equilibrado)
-Granjero: $400 (Menos dinero, más resistente)" 
-                             editable="false" prefRowCount="3" wrapText="true"
-                             style="-fx-background-color: rgba(0, 0, 0, 0.3); -fx-text-fill: #FFF; -fx-border-color: #8B4513; -fx-border-width: 1;"/>
+                    <TextArea editable="false" prefRowCount="3" wrapText="true"
+                              style="-fx-background-color: rgba(0, 0, 0, 0.3); -fx-text-fill: #FFF; -fx-border-color: #8B4513; -fx-border-width: 1;">
+                        <text>
+                            Banquero: $1600 (Más dinero, menos habilidades)&#10;
+                            Carpintero: $800 (Equilibrado)&#10;
+                            Granjero: $400 (Menos dinero, más resistente)
+                        </text>
+                    </TextArea>
                 </VBox>
                 
                 <!-- Miembros de la Caravana -->

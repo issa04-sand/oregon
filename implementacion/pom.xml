@@ -10,7 +10,7 @@
     <version>1.0</version>
     <packaging>jar</packaging>
 
-    <n>The Oregon Trail Game</n>
+    <name>The Oregon Trail Game</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
