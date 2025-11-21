@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="com.oregontrail.controllers.InicioController"
+            style="-fx-background-color: linear-gradient(to bottom, #8B4513, #D2691E);">
+    <center>
+        <VBox alignment="CENTER" spacing="30" style="-fx-background-color: rgba(139, 69, 19, 0.8); -fx-background-radius: 15; -fx-padding: 50;">
+            
+            <Label text="THE OREGON TRAIL" 
+                   style="-fx-text-fill: #FFD700; -fx-font-size: 48px; -fx-font-weight: bold; -fx-effect: dropshadow(gaussian, #000, 10, 0, 0, 0);"/>
+            
+            <Label text="Un viaje épico hacia el Oeste" 
+                   style="-fx-text-fill: #FFF; -fx-font-size: 20px; -fx-font-style: italic;"/>
+            
+            <VBox spacing="10" alignment="CENTER" style="-fx-padding: 30 0 0 0;">
+                <Label text="🏔️  2000 millas de aventura" style="-fx-text-fill: #FFF; -fx-font-size: 16px;"/>
+                <Label text="🛒  Gestiona tus recursos" style="-fx-text-fill: #FFF; -fx-font-size: 16px;"/>
+                <Label text="🎯  Caza para sobrevivir" style="-fx-text-fill: #FFF; -fx-font-size: 16px;"/>
+                <Label text="⚠️  Enfrenta eventos aleatorios" style="-fx-text-fill: #FFF; -fx-font-size: 16px;"/>
+            </VBox>
+            
+            <VBox spacing="15" alignment="CENTER" style="-fx-padding: 20 0 0 0;">
+                <Button text="COMENZAR VIAJE" onAction="#handleComenzar" prefWidth="250" prefHeight="50"
+                       style="-fx-background-color: #228B22; -fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold; -fx-background-radius: 10; -fx-cursor: hand; -fx-effect: dropshadow(gaussian, #000, 5, 0, 0, 2);"/>
+                
+                <Button text="INSTRUCCIONES" onAction="#handleInstrucciones" prefWidth="250" prefHeight="40"
+                       style="-fx-background-color: #4169E1; -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold; -fx-background-radius: 10; -fx-cursor: hand;"/>
+                
+                <Button text="SALIR" onAction="#handleSalir" prefWidth="250" prefHeight="40"
+                       style="-fx-background-color: #DC143C; -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold; -fx-background-radius: 10; -fx-cursor: hand;"/>
+            </VBox>
+        </VBox>
+    </center>
+    
+    <bottom>
+        <HBox alignment="CENTER" style="-fx-padding: 10; -fx-background-color: rgba(0, 0, 0, 0.5);">
+            <Label text="© 2024 Oregon Trail Game - Versión JavaFX" 
+                   style="-fx-text-fill: #FFD700; -fx-font-size: 12px;"/>
+        </HBox>
+    </bottom>
+</BorderPane>

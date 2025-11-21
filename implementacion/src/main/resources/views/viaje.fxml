@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.oregontrail.controllers.ViajeController"
+            style="-fx-background-color: #87CEEB;">
+
+    <!-- Panel Superior: Información del Viaje -->
+    <top>
+        <VBox style="-fx-background-color: #8B4513; -fx-padding: 15;">
+            <HBox spacing="30" alignment="CENTER">
+                <VBox alignment="CENTER">
+                    <Label text="📅 Fecha" style="-fx-text-fill: #FFD700; -fx-font-size: 12px;"/>
+                    <Label fx:id="lblFecha" text="1 de Marzo" style="-fx-text-fill: #FFF; -fx-font-weight: bold;"/>
+                </VBox>
+                <VBox alignment="CENTER">
+                    <Label text="🌦️ Clima" style="-fx-text-fill: #FFD700; -fx-font-size: 12px;"/>
+                    <Label fx:id="lblClima" text="Soleado" style="-fx-text-fill: #FFF; -fx-font-weight: bold;"/>
+                </VBox>
+                <VBox alignment="CENTER">
+                    <Label text="📍 Ubicación" style="-fx-text-fill: #FFD700; -fx-font-size: 12px;"/>
+                    <Label fx:id="lblUbicacion" text="Independence" style="-fx-text-fill: #FFF; -fx-font-weight: bold;"/>
+                </VBox>
+                <VBox alignment="CENTER">
+                    <Label text="🛣️ Distancia" style="-fx-text-fill: #FFD700; -fx-font-size: 12px;"/>
+                    <Label fx:id="lblDistancia" text="0 / 2000 millas" style="-fx-text-fill: #FFF; -fx-font-weight: bold;"/>
+                </VBox>
+            </HBox>
+
+            <!-- Barra de progreso -->
+            <ProgressBar fx:id="progressBar" prefWidth="800" prefHeight="20" style="-fx-accent: #FFD700;">
+                <VBox.margin><Insets top="10"/></VBox.margin>
+            </ProgressBar>
+        </VBox>
+    </top>
+
+    <!-- Centro: Vista del Camino -->
+    <center>
+        <VBox alignment="CENTER" spacing="20" style="-fx-padding: 20;">
+
+            <Label text="🏔️" style="-fx-font-size: 80px;"/>
+            <Label text="EN EL CAMINO" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #654321;"/>
+
+            <TextArea fx:id="txtEvento" prefRowCount="4" wrapText="true" prefWidth="600"
+                      style="-fx-background-color: rgba(255, 255, 255, 0.8); -fx-border-color: #8B4513; -fx-border-width: 2;"/>
+
+            <!-- Botones de Acción -->
+            <GridPane hgap="15" vgap="15" alignment="CENTER">
+                <Button text="⏭️ Continuar Viaje" onAction="#handleContinuar" prefWidth="180" prefHeight="60"
+                        style="-fx-background-color: #228B22; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 10;"
+                        GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+
+                <Button text="⏸️ Descansar" onAction="#handleDescansar" prefWidth="180" prefHeight="60"
+                        style="-fx-background-color: #4169E1; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 10;"
+                        GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+                <Button text="🎯 Cazar" onAction="#handleCazar" prefWidth="180" prefHeight="60"
+                        style="-fx-background-color: #8B4513; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 10;"
+                        GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+
+                <Button text="📊 Estado" onAction="#handleEstado" prefWidth="180" prefHeight="60"
+                        style="-fx-background-color: #FF8C00; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 10;"
+                        GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+            </GridPane>
+        </VBox>
+    </center>
+
+    <!-- Panel Derecho: Recursos -->
+    <right>
+        <VBox spacing="10" style="-fx-background-color: rgba(139, 69, 19, 0.8); -fx-padding: 20; -fx-min-width: 200;">
+            <Label text="RECURSOS" style="-fx-text-fill: #FFD700; -fx-font-size: 16px; -fx-font-weight: bold;"/>
+            <Separator/>
+
+            <VBox spacing="5">
+                <Label text="💰 Dinero" style="-fx-text-fill: #FFF; -fx-font-size: 12px;"/>
+                <Label fx:id="lblDinero" text="$0" style="-fx-text-fill: #90EE90; -fx-font-weight: bold;"/>
+            </VBox>
+
+            <VBox spacing="5">
+                <Label text="🌾 Comida" style="-fx-text-fill: #FFF; -fx-font-size: 12px;"/>
+                <Label fx:id="lblComida" text="0 lbs" style="-fx-text-fill: #FFF; -fx-font-weight: bold;"/>
+            </VBox>
+
+            <VBox spacing="5">
+                <Label text="🔫 Municiones" style="-fx-text-fill: #FFF; -fx-font-size: 12px;"/>
+                <Label fx:id="lblMuniciones" text="0" style="-fx-text-fill: #FFF; -fx-font-weight: bold;"/>
+            </VBox>
+
+            <VBox spacing="5">
+                <Label text="👕 Ropa" style="-fx-text-fill: #FFF; -fx-font-size: 12px;"/>
+                <Label fx:id="lblRopa" text="0" style="-fx-text-fill: #FFF; -fx-font-weight: bold;"/>
+            </VBox>
+
+            <Separator/>
+
+            <VBox spacing="5">
+                <Label text="❤️ Salud" style="-fx-text-fill: #FFF; -fx-font-size: 12px;"/>
+                <Label fx:id="lblSalud" text="100%" style="-fx-text-fill: #FF6B6B; -fx-font-weight: bold;"/>
+            </VBox>
+
+            <VBox spacing="5">
+                <Label text="👥 Vivos" style="-fx-text-fill: #FFF; -fx-font-size: 12px;"/>
+                <Label fx:id="lblMiembros" text="0/0" style="-fx-text-fill: #FFF; -fx-font-weight: bold;"/>
+            </VBox>
+        </VBox>
+    </right>
+</BorderPane>

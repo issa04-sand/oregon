@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="com.oregontrail.controllers.ConfiguracionController"
+            style="-fx-background-color: #2F4F4F;">
+    <top>
+        <VBox style="-fx-background-color: #8B4513; -fx-padding: 20;">
+            <Label text="CONFIGURACIÓN INICIAL" 
+                   style="-fx-text-fill: #FFD700; -fx-font-size: 28px; -fx-font-weight: bold;"/>
+            <Label text="Prepara tu caravana para el viaje" 
+                   style="-fx-text-fill: #FFF; -fx-font-size: 14px;"/>
+        </VBox>
+    </top>
+    
+    <center>
+        <ScrollPane fitToWidth="true" style="-fx-background: transparent;">
+            <VBox spacing="20" style="-fx-padding: 30;">
+                
+                <!-- Información del Jugador -->
+                <VBox spacing="15" style="-fx-background-color: rgba(255, 255, 255, 0.1); -fx-padding: 20; -fx-background-radius: 10;">
+                    <Label text="TU INFORMACIÓN" style="-fx-text-fill: #FFD700; -fx-font-size: 20px; -fx-font-weight: bold;"/>
+                    
+                    <HBox spacing="15" alignment="CENTER_LEFT">
+                        <Label text="Tu Nombre:" style="-fx-text-fill: #FFF; -fx-font-weight: bold; -fx-min-width: 120;"/>
+                        <TextField fx:id="txtNombre" promptText="Ingresa tu nombre" prefWidth="300"
+                                  style="-fx-background-color: white; -fx-border-color: #8B4513; -fx-border-width: 2; -fx-border-radius: 5; -fx-background-radius: 5; -fx-padding: 8;"/>
+                    </HBox>
+                    
+                    <HBox spacing="15" alignment="CENTER_LEFT">
+                        <Label text="Profesión:" style="-fx-text-fill: #FFF; -fx-font-weight: bold; -fx-min-width: 120;"/>
+                        <ComboBox fx:id="cmbProfesion" prefWidth="300"
+                                 style="-fx-background-color: white; -fx-border-color: #8B4513; -fx-border-width: 2;"/>
+                        <Label fx:id="lblDineroInicial" style="-fx-text-fill: #FFD700; -fx-font-size: 14px; -fx-font-weight: bold;"/>
+                    </HBox>
+                    
+                    <TextArea text="Banquero: $1600 (Más dinero, menos habilidades)
+Carpintero: $800 (Equilibrado)
+Granjero: $400 (Menos dinero, más resistente)" 
+                             editable="false" prefRowCount="3" wrapText="true"
+                             style="-fx-background-color: rgba(0, 0, 0, 0.3); -fx-text-fill: #FFF; -fx-border-color: #8B4513; -fx-border-width: 1;"/>
+                </VBox>
+                
+                <!-- Miembros de la Caravana -->
+                <VBox spacing="15" style="-fx-background-color: rgba(255, 255, 255, 0.1); -fx-padding: 20; -fx-background-radius: 10;">
+                    <Label text="MIEMBROS DE TU CARAVANA" style="-fx-text-fill: #FFD700; -fx-font-size: 20px; -fx-font-weight: bold;"/>
+                    
+                    <GridPane hgap="15" vgap="10">
+                        <Label text="Miembro 1:" style="-fx-text-fill: #FFF;" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                        <TextField fx:id="txtMiembro1" prefWidth="200" GridPane.columnIndex="1" GridPane.rowIndex="0"
+                                  style="-fx-background-color: white; -fx-border-color: #8B4513; -fx-border-width: 2; -fx-border-radius: 5;"/>
+                        
+                        <Label text="Miembro 2:" style="-fx-text-fill: #FFF;" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                        <TextField fx:id="txtMiembro2" prefWidth="200" GridPane.columnIndex="1" GridPane.rowIndex="1"
+                                  style="-fx-background-color: white; -fx-border-color: #8B4513; -fx-border-width: 2; -fx-border-radius: 5;"/>
+                        
+                        <Label text="Miembro 3:" style="-fx-text-fill: #FFF;" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+                        <TextField fx:id="txtMiembro3" prefWidth="200" GridPane.columnIndex="1" GridPane.rowIndex="2"
+                                  style="-fx-background-color: white; -fx-border-color: #8B4513; -fx-border-width: 2; -fx-border-radius: 5;"/>
+                        
+                        <Label text="Miembro 4:" style="-fx-text-fill: #FFF;" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+                        <TextField fx:id="txtMiembro4" prefWidth="200" GridPane.columnIndex="1" GridPane.rowIndex="3"
+                                  style="-fx-background-color: white; -fx-border-color: #8B4513; -fx-border-width: 2; -fx-border-radius: 5;"/>
+                    </GridPane>
+                </VBox>
+                
+                <HBox spacing="15" alignment="CENTER">
+                    <Button text="CONTINUAR A LA TIENDA" onAction="#handleContinuar" prefWidth="250" prefHeight="50"
+                           style="-fx-background-color: #228B22; -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold; -fx-background-radius: 10; -fx-cursor: hand;"/>
+                    
+                    <Button text="VOLVER" onAction="#handleVolver" prefWidth="150" prefHeight="50"
+                           style="-fx-background-color: #DC143C; -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold; -fx-background-radius: 10; -fx-cursor: hand;"/>
+                </HBox>
+            </VBox>
+        </ScrollPane>
+    </center>
+</BorderPane>
