@@ -120,7 +120,7 @@ public class ViajeController implements Initializable {
     
     private boolean verificarEstado() {
         if (gm.haGanado()) {
-            cargarVista("/com/oregontrail/views/victoria.fxml", "¡Victoria!");
+            cargarVista("/views/victoria.fxml", "¡Victoria!");
             return true;
         }
         
@@ -130,7 +130,7 @@ public class ViajeController implements Initializable {
             alert.setHeaderText("Has perdido");
             alert.setContentText("Tu caravana no pudo completar el viaje.");
             alert.showAndWait();
-            cargarVista("/com/oregontrail/views/inicio.fxml", "Oregon Trail");
+            cargarVista("/views/inicio.fxml", "Oregon Trail");
             return true;
         }
         
