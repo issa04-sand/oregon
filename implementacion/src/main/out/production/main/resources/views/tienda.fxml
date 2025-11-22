@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.oregontrail.controllers.TiendaController"
+      spacing="15" style="-fx-padding: 30; -fx-background-color: #2F4F4F;">
+
+    <Label text="TIENDA GENERAL" style="-fx-text-fill: #FFD700; -fx-font-size: 24px;"/>
+    <Label fx:id="lblDinero" text="Dinero: $0" style="-fx-text-fill: #90EE90; -fx-font-size: 18px;"/>
+
+    <VBox spacing="10" style="-fx-padding: 20; -fx-background-color: rgba(255,255,255,0.1);">
+        <HBox spacing="20">
+            <Label text="Comida ($0.20/lb):" style="-fx-text-fill: white; -fx-min-width: 200;"/>
+            <Spinner fx:id="spnComida"/>
+        </HBox>
+
+        <HBox spacing="20">
+            <Label text="Municiones ($2.00):" style="-fx-text-fill: white; -fx-min-width: 200;"/>
+            <Spinner fx:id="spnMuniciones"/>
+        </HBox>
+
+        <HBox spacing="20">
+            <Label text="Ropa ($10.00):" style="-fx-text-fill: white; -fx-min-width: 200;"/>
+            <Spinner fx:id="spnRopa"/>
+        </HBox>
+
+        <HBox spacing="20">
+            <Label text="Ruedas ($10.00):" style="-fx-text-fill: white; -fx-min-width: 200;"/>
+            <Spinner fx:id="spnRuedas"/>
+        </HBox>
+
+        <HBox spacing="20">
+            <Label text="Ejes ($10.00):" style="-fx-text-fill: white; -fx-min-width: 200;"/>
+            <Spinner fx:id="spnEjes"/>
+        </HBox>
+
+        <HBox spacing="20">
+            <Label text="Lenguas ($10.00):" style="-fx-text-fill: white; -fx-min-width: 200;"/>
+            <Spinner fx:id="spnLenguas"/>
+        </HBox>
+    </VBox>
+
+    <Label fx:id="lblTotal" text="Total: $0.00" style="-fx-text-fill: #FFD700; -fx-font-size: 20px;"/>
+
+    <HBox spacing="15">
+        <Button text="COMPRAR Y PARTIR" onAction="#handleComprar" prefWidth="200" prefHeight="40"
+                style="-fx-background-color: #228B22; -fx-text-fill: white; -fx-font-size: 14px;"/>
+        <Button text="VOLVER" onAction="#handleVolver" prefWidth="150" prefHeight="40"
+                style="-fx-background-color: #DC143C; -fx-text-fill: white; -fx-font-size: 14px;"/>
+    </HBox>
+</VBox>
